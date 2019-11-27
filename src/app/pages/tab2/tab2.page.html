@@ -16,11 +16,11 @@
         <ion-item *ngFor="let registro of dataLocal.registros" (click)="abrirRegistro(registro)" detail>
             <ion-icon slot="start" [name]="registro.icon"></ion-icon>
             <ion-label>
-                <h1>
-                    {{ registro.text}}
-                </h1>
+                <h2>
+                    Tipo: {{ registro.type }}
+                </h2>
                 <p>
-                    {{ registro.created | date: 'medium'}}
+                    Info: {{ registro.text }} <br> {{ registro.created | date: 'medium'}}
                 </p>
             </ion-label>
         </ion-item>

@@ -8,9 +8,11 @@ import { DataLocalService } from '../../services/data-local.service';
 })
 export class Tab2Page {
 
-  constructor(public dataLocal: DataLocalService) { }
+  constructor(
+    public dataLocal: DataLocalService) { }
   enviar() {
     console.log("enviando");
+    this.dataLocal.borrarRegistro();
   }
   abrirRegistro(registro){
     console.log( registro);
