@@ -4,13 +4,13 @@ import { UsuarioGuard } from './guards/usuario.guard';
 
 const routes: Routes = [
   {
-    path: '',
-    // loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule),
+    path: 'main',
     loadChildren: './pages/tabs/tabs.module#TabsPageModule',
-    canLoad: [ UsuarioGuard ]
+    // canActivate: [ UsuarioGuard ]
+    canLoad: [UsuarioGuard]
   },
   {
-     path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' 
+    path: 'login', loadChildren: './pages/login/login.module#LoginPageModule'
   },
   {
     path: '',
@@ -25,4 +25,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class AppRoutingModule {}
+export class AppRoutingModule { }

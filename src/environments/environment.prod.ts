@@ -1,4 +1,6 @@
+var url = window.location.hostname;
+var p= window.location.protocol;
 export const environment = {
   production: true,
-  url: 'http://192.168.0.10:3000'
+  url: p + '//'+url + ':3000'
 };

@@ -15,7 +15,7 @@ export class LoginPage implements OnInit {
   @ViewChild('slidePrincipal',{static: true}) slides: IonSlides;
 
   loginUser = {
-    email: 'test1@test.com',
+    email: 'test@test.com',
     password: '123456'
   };
 
@@ -43,13 +43,12 @@ export class LoginPage implements OnInit {
 
     if ( valido ) {
       // navegar al tabs
-      this.navCtrl.navigateRoot( '/main/tabs/tab1', { animated: true } );
+      console.log('hola');
+      this.navCtrl.navigateRoot( '/tabs/tab1', { animated: true } );
     } else {
       // mostrar alerta de usuario y contraseña no correctos
       this.uiService.alertaInformativa('Usuario y contraseña no son correctos.');
     }
-
-
   }
 
   async registro( fRegistro: NgForm ) {
@@ -60,7 +59,7 @@ export class LoginPage implements OnInit {
 
     if ( valido ) {
       // navegar al tabs
-      this.navCtrl.navigateRoot( '/main/tabs/tab1', { animated: true } );
+      this.navCtrl.navigateRoot( '/tabs/tab1', { animated: true } );
     } else {
       // mostrar alerta de usuario y contraseña no correctos
       this.uiService.alertaInformativa('Ese correo electrónico ya existe.');
